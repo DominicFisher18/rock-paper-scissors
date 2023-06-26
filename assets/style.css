@@ -1,0 +1,156 @@
+body {
+    background-color: rgb(214, 214, 214);
+}
+
+.header {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header-text {
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+}
+
+.header-text-div {
+    border: 3px solid white;
+    border-radius: 50px;
+}
+
+.main-left {
+    margin-left: 200px;
+}
+
+.scissors-img,
+.rock-img {
+    height: 80px;
+    width: 80px;
+}
+
+.scissors-img {
+    padding-left: 30px;
+}
+
+.rock-img {
+    padding-right: 30px;
+}
+
+.footer-text {
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    font-size: 25px;
+}
+
+.footer {
+    background-color: black;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.main {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-left-top {
+    border: 5px solid black;
+    /* display: flex;
+    flex-direction: row; */
+    border-radius: 30px;
+    /* width: 30%; */
+}
+
+.choose-text {
+    font-size: 30px;
+    font-family: Arial;
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rock-button-img,
+.paper-button-img,
+.scissors-button-img {
+    height: 80px;
+    width: 80px;
+}
+
+.rock-button,
+.paper-button,
+.scissors-button {
+    background-color: transparent;
+    margin: 15px;
+    padding: 30px;
+    /* height: 100px;
+    width: 100px; */
+    border-radius: 90px;
+}
+
+.rock-button {
+    border: 5px solid rgb(192, 36, 36);
+}
+
+.paper-button {
+    border: 6px solid rgb(238, 238, 2);
+}
+
+.scissors-button {
+    border: 6px solid rgb(3, 3, 209);
+}
+
+.main-left-bottom {
+    border: 5px solid black;
+    /* width: 30%; */
+    margin-top: 20px;
+    border-radius: 30px;
+    height: 200px;
+    text-align: center;
+}
+
+.main-right {
+    border: 5px solid black;
+    border-radius: 40px;
+    margin-right: 20%;
+    margin-left: 30px;
+    height: 300px;
+    margin-top: 100px;
+}
+
+/* .main-right-header-div {
+    border: 3px solid black;
+    border-radius: 40px;
+} */
+
+.main-right-header {
+    font-size: 40px;
+    font-family: Arial;
+    padding: 0px 50px 0px 50px;
+}
+
+.main-right-text {
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
