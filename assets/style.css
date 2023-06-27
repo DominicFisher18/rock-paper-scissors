@@ -120,6 +120,12 @@ body {
     border: 6px solid rgb(3, 3, 209);
 }
 
+.rock-button:hover,
+.paper-button:hover,
+.scissors-button:hover {
+    cursor: pointer;
+}
+
 .main-left-bottom {
     border: 5px solid black;
     /* width: 30%; */
@@ -153,4 +159,8 @@ body {
     font-size: 30px;
     margin-bottom: 10px;
     padding-left: 10px;
+}
+
+.text-span {
+    padding-left: 5px;
 }
