@@ -2,6 +2,12 @@ const rockButton = document.querySelector('.js-rock-button')
 const paperButton = document.querySelector('.js-paper-button')
 const scissorsButton = document.querySelector('.js-scissors-button')
 
+let score = {
+    wins: 0,
+    losses: 0,
+    ties: 0
+}
+
 rockButton.addEventListener('click', function () {
     runGame('rock')
 })
@@ -19,29 +25,55 @@ function runGame(playerChoice) {
 
     if (playerChoice === 'rock') {
         if (computerChoice === 'rock') {
-            console.log('Its a tie.')
+            // console.log('Its a tie.')
+            gameResult = 'Its a tie.'
         } else if (computerChoice === 'paper') {
-            console.log('You lose :(')
+            // console.log('You lose :(')
+            gameResult = 'You lose :('
         } else if (computerChoice === 'scissors') {
-            console.log('You win!')
+            // console.log('You win!')
+            gameResult = 'You win!'
         }
     } else if (playerChoice === 'paper') {
         if (computerChoice === 'rock') {
-            console.log('You win!')
+            // console.log('You win!')
+            gameResult = 'You win!'
         } else if (computerChoice === 'paper') {
-            console.log('Its a tie.')
+            // console.log('Its a tie.')
+            gameResult = 'Its a tie.'
         } else if (computerChoice === 'scissors') {
-            console.log('You lose :(')
+            // console.log('You lose :(')
+            gameResult = 'You lose :('
         }
     } else if (playerChoice === 'scissors') {
         if (computerChoice === 'rock') {
-            console.log('You lose :(')
+            // console.log('You lose :(')
+            gameResult = 'You lose :('
         } else if (computerChoice === 'paper') {
-            console.log('You win!')
+            // console.log('You win!')
+            gameResult = 'You win!'
         } else if (computerChoice === 'scissors') {
-            console.log('Its a tie.')
+            // console.log('Its a tie.')
+            gameResult = 'Its a tie.'
         }
     }
+
+    if (gameResult === 'You win!') {
+        score.wins ++
+    } else if (gameResult === 'You lose :(') {
+        score.losses ++
+    } else if (gameResult === 'Its a tie.') {
+        score.ties ++
+    }
+
+    document.querySelector('.js-wins')
+        .innerHTML = score.wins
+    document.querySelector('.js-losses')
+        .innerHTML = score.losses
+    document.querySelector('.js-ties ')
+        .innerHTML = score.ties
+
+    console.log(`${gameResult}`)
 }
 
 function getComputerMove() {
