@@ -73,7 +73,14 @@ function runGame(playerChoice) {
     document.querySelector('.js-ties ')
         .innerHTML = score.ties
 
-    console.log(`${gameResult}`)
+    // showResult()
+    document.querySelector('.js-result')
+        .innerHTML = gameResult
+
+    document.querySelector('.js-rps-result')
+        .innerHTML =   `You <img class="rps-img" src="/rock-paper-scissors/assets/img/${playerChoice}-emoji.png"> 
+                    VS 
+                        <img class="rps-img" src="/rock-paper-scissors/assets/img/${computerChoice}-emoji.png"> Computer`
 }
 
 function getComputerMove() {
@@ -91,3 +98,6 @@ function getComputerMove() {
     return computerChoice
 }
 
+// function showResult() {
+    
+// }

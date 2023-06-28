@@ -90,9 +90,7 @@ body {
     font-weight: bold;
 }
 
-.rock-button-img,
-.paper-button-img,
-.scissors-button-img {
+.rps-img {
     height: 80px;
     width: 80px;
 }
