@@ -162,3 +162,17 @@ body {
 .text-span {
     padding-left: 5px;
 }
+
+.play-again-button {
+    background-color: black;
+    color: white;font-family: Arial;
+    font-size: 25px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.play-again-button:hover {
+    cursor: pointer;
+}

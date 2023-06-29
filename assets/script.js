@@ -25,35 +25,26 @@ function runGame(playerChoice) {
 
     if (playerChoice === 'rock') {
         if (computerChoice === 'rock') {
-            // console.log('Its a tie.')
             gameResult = 'Its a tie.'
         } else if (computerChoice === 'paper') {
-            // console.log('You lose :(')
             gameResult = 'You lose :('
         } else if (computerChoice === 'scissors') {
-            // console.log('You win!')
             gameResult = 'You win!'
         }
     } else if (playerChoice === 'paper') {
         if (computerChoice === 'rock') {
-            // console.log('You win!')
             gameResult = 'You win!'
         } else if (computerChoice === 'paper') {
-            // console.log('Its a tie.')
             gameResult = 'Its a tie.'
         } else if (computerChoice === 'scissors') {
-            // console.log('You lose :(')
             gameResult = 'You lose :('
         }
     } else if (playerChoice === 'scissors') {
         if (computerChoice === 'rock') {
-            // console.log('You lose :(')
             gameResult = 'You lose :('
         } else if (computerChoice === 'paper') {
-            // console.log('You win!')
             gameResult = 'You win!'
         } else if (computerChoice === 'scissors') {
-            // console.log('Its a tie.')
             gameResult = 'Its a tie.'
         }
     }
@@ -81,6 +72,10 @@ function runGame(playerChoice) {
         .innerHTML =   `You <img class="rps-img" src="/rock-paper-scissors/assets/img/${playerChoice}-emoji.png"> 
                     VS 
                         <img class="rps-img" src="/rock-paper-scissors/assets/img/${computerChoice}-emoji.png"> Computer`
+
+    if (score.wins === 5 || score.losses === 5) {
+        gameOver()
+    }
 }
 
 function getComputerMove() {
@@ -98,6 +93,29 @@ function getComputerMove() {
     return computerChoice
 }
 
-// function showResult() {
-    
-// }
+function gameOver() {
+
+    if (score.wins === 5) {
+        document.querySelector('.js-result')
+            .innerHTML = 'Game Over! You won this round'
+    } else if (score.losses === 5) {
+        document.querySelector('.js-result')
+            .innerHTML = 'Game Over! Better luck next time'
+    }
+
+    rockButton.disabled = true
+    paperButton.disabled = true
+    scissorsButton.disabled = true
+
+    document.querySelector('.js-rps-result')
+        .innerHTML = `<button class="play-again-button js-play-again">
+                        Play Again?
+                      </button>`
+
+    let playAgain = document.querySelector('.js-play-again')
+    playAgain.addEventListener('click', returnHome)
+
+    function returnHome() {
+        location.reload()
+    }
+}
