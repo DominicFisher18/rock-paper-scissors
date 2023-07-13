@@ -64,7 +64,6 @@ function runGame(playerChoice) {
     document.querySelector('.js-ties ')
         .innerHTML = score.ties
 
-    // showResult()
     document.querySelector('.js-result')
         .innerHTML = gameResult
 
